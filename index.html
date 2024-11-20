@@ -4,33 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DFINE JEWELS - Joyería de Lujo</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dfine-gold': '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <button id="menu-toggle" aria-label="Menú">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<body class="bg-black text-white">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex-1">
+                <button id="menu-toggle" class="text-white focus:outline-none" aria-label="Menú">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
             </div>
-            <div class="nav-center">
-                <a href="/" class="logo">DFINE JEWELS</a>
+            <div class="flex-1 text-center">
+                <a href="/" class="text-2xl font-bold text-dfine-gold">DFINE JEWELS</a>
             </div>
-            <div class="nav-right">
-                <a href="/search" class="nav-icon" aria-label="Buscar">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <div class="flex-1 flex justify-end">
+                <a href="/search" class="text-white mr-4" aria-label="Buscar">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </a>
-                <a href="/cart" class="nav-icon" aria-label="Carrito">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                <a href="/cart" class="text-white" aria-label="Carrito">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
                     </svg>
                 </a>
             </div>
@@ -38,93 +53,112 @@
     </header>
 
     <main>
-        <section class="hero">
-            <video autoplay loop muted playsinline poster="poster.jpg">
+        <section class="relative h-screen">
+            <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline poster="poster.jpg">
                 <source src="background-video.mp4" type="video/mp4">
             </video>
-            <div class="hero-content">
-                <h1>DFINE JEWELS</h1>
-                <a href="#shop-now" class="cta-button">COMPRAR AHORA</a>
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 text-shadow">DFINE JEWELS</h1>
+                <a href="#shop-now" class="bg-white text-black px-8 py-3 text-lg font-semibold hover:bg-opacity-90 transition duration-300">COMPRAR AHORA</a>
             </div>
         </section>
 
-        <section class="featured-products">
-            <h2>Productos Destacados</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="product1.jpg" alt="Cadena Cubana">
-                    <h3>Cadena Cubana</h3>
-                    <p>Desde $999</p>
-                    <a href="/product/cadena-cubana" class="product-link">Ver Detalles</a>
-                </div>
-                <div class="product-card">
-                    <img src="product2.jpg" alt="Colgante Personalizado">
-                    <h3>Colgante Personalizado</h3>
-                    <p>Desde $599</p>
-                    <a href="/product/colgante-personalizado" class="product-link">Ver Detalles</a>
-                </div>
-                <div class="product-card">
-                    <img src="product3.jpg" alt="Set de Diamantes">
-                    <h3>Set de Diamantes</h3>
-                    <p>Desde $1,999</p>
-                    <a href="/product/set-diamantes" class="product-link">Ver Detalles</a>
+        <section id="featured-products" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Productos Destacados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-black p-6 rounded-lg shadow-lg">
+                        <img src="product1.jpg" alt="Cadena Cubana" class="w-full h-64 object-cover mb-4 rounded">
+                        <h3 class="text-xl font-semibold mb-2">Cadena Cubana</h3>
+                        <p class="text-gray-400 mb-4">Desde $999</p>
+                        <a href="/product/cadena-cubana" class="inline-block bg-dfine-gold text-black px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Ver Detalles</a>
+                    </div>
+                    <div class="bg-black p-6 rounded-lg shadow-lg">
+                        <img src="product2.jpg" alt="Colgante Personalizado" class="w-full h-64 object-cover mb-4 rounded">
+                        <h3 class="text-xl font-semibold mb-2">Colgante Personalizado</h3>
+                        <p class="text-gray-400 mb-4">Desde $599</p>
+                        <a href="/product/colgante-personalizado" class="inline-block bg-dfine-gold text-black px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Ver Detalles</a>
+                    </div>
+                    <div class="bg-black p-6 rounded-lg shadow-lg">
+                        <img src="product3.jpg" alt="Set de Diamantes" class="w-full h-64 object-cover mb-4 rounded">
+                        <h3 class="text-xl font-semibold mb-2">Set de Diamantes</h3>
+                        <p class="text-gray-400 mb-4">Desde $1,999</p>
+                        <a href="/product/set-diamantes" class="inline-block bg-dfine-gold text-black px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Ver Detalles</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="about-us">
-            <h2>Sobre Nosotros</h2>
-            <p>DFINE JEWELS es una marca de joyería de lujo que ofrece piezas únicas y personalizadas. Nuestro compromiso es proporcionar la más alta calidad en cada detalle.</p>
+        <section id="about-us" class="py-16 bg-gray-800">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Sobre Nosotros</h2>
+                <p class="max-w-2xl mx-auto text-lg">DFINE JEWELS es una marca de joyería de lujo que ofrece piezas únicas y personalizadas. Nuestro compromiso es proporcionar la más alta calidad en cada detalle, creando joyas que reflejen la individualidad y el estilo de nuestros clientes.</p>
+            </div>
         </section>
 
-        <section class="instagram-feed">
-            <h2>Síguenos en Instagram</h2>
-            <div class="instagram-grid">
-                <!-- Aquí irían las imágenes de Instagram -->
+        <section id="instagram-feed" class="py-16 bg-black">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Síguenos en Instagram</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="insta1.jpg" alt="Instagram 1" class="w-full h-40 object-cover rounded">
+                    <img src="insta2.jpg" alt="Instagram 2" class="w-full h-40 object-cover rounded">
+                    <img src="insta3.jpg" alt="Instagram 3" class="w-full h-40 object-cover rounded">
+                    <img src="insta4.jpg" alt="Instagram 4" class="w-full h-40 object-cover rounded">
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="/about">Sobre Nosotros</a></li>
-                    <li><a href="/contact">Contacto</a></li>
-                    <li><a href="/faq">Preguntas Frecuentes</a></li>
-                    <li><a href="/shipping">Envíos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Síguenos</h3>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="hover:text-dfine-gold transition duration-300">Sobre Nosotros</a></li>
+                        <li><a href="/contact" class="hover:text-dfine-gold transition duration-300">Contacto</a></li>
+                        <li><a href="/faq" class="hover:text-dfine-gold transition duration-300">Preguntas Frecuentes</a></li>
+                        <li><a href="/shipping" class="hover:text-dfine-gold transition duration-300">Envíos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook" class="text-2xl hover:text-dfine-gold transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="text-2xl hover:text-dfine-gold transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="text-2xl hover:text-dfine-gold transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Boletín</h3>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu correo electrónico" class="flex-grow px-4 py-2 bg-gray-800 text-white rounded-l focus:outline-none" required>
+                        <button type="submit" class="bg-dfine-gold text-black px-4 py-2 rounded-r hover:bg-opacity-80 transition duration-300">Suscribirse</button>
+                    </form>
                 </div>
             </div>
-            <div class="footer-section">
-                <h3>Boletín</h3>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Tu correo electrónico" required>
-                    <button type="submit">Suscribirse</button>
-                </form>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p>&copy; 2024 DFINE JEWELS. Todos los derechos reservados.</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 DFINE JEWELS. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <div class="chat-widget">
-        <button class="chat-toggle" aria-label="Abrir chat">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    <div id="chat-widget" class="fixed bottom-4 right-4 z-50">
+        <button id="chat-toggle" class="bg-dfine-gold text-black w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-opacity-80 transition duration-300" aria-label="Abrir chat">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
             </svg>
         </button>
     </div>
 
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
