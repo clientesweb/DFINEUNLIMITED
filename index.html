@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFINE JEWELS - Joyería de Lujo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <button id="menu-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="nav-center">
+                <a href="/" class="logo">DFINE JEWELS</a>
+            </div>
+            <div class="nav-right">
+                <a href="/search" class="nav-icon" aria-label="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
+                <a href="/cart" class="nav-icon" aria-label="Carrito">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <video autoplay loop muted playsinline poster="poster.jpg">
+                <source src="background-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1>DFINE JEWELS</h1>
+                <a href="#shop-now" class="cta-button">COMPRAR AHORA</a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Productos Destacados</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Cadena Cubana">
+                    <h3>Cadena Cubana</h3>
+                    <p>Desde $999</p>
+                    <a href="/product/cadena-cubana" class="product-link">Ver Detalles</a>
+                </div>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Colgante Personalizado">
+                    <h3>Colgante Personalizado</h3>
+                    <p>Desde $599</p>
+                    <a href="/product/colgante-personalizado" class="product-link">Ver Detalles</a>
+                </div>
+                <div class="product-card">
+                    <img src="product3.jpg" alt="Set de Diamantes">
+                    <h3>Set de Diamantes</h3>
+                    <p>Desde $1,999</p>
+                    <a href="/product/set-diamantes" class="product-link">Ver Detalles</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us">
+            <h2>Sobre Nosotros</h2>
+            <p>DFINE JEWELS es una marca de joyería de lujo que ofrece piezas únicas y personalizadas. Nuestro compromiso es proporcionar la más alta calidad en cada detalle.</p>
+        </section>
+
+        <section class="instagram-feed">
+            <h2>Síguenos en Instagram</h2>
+            <div class="instagram-grid">
+                <!-- Aquí irían las imágenes de Instagram -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="/about">Sobre Nosotros</a></li>
+                    <li><a href="/contact">Contacto</a></li>
+                    <li><a href="/faq">Preguntas Frecuentes</a></li>
+                    <li><a href="/shipping">Envíos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Boletín</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DFINE JEWELS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="chat-widget">
+        <button class="chat-toggle" aria-label="Abrir chat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
