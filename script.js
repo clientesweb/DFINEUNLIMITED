@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('nav');
 
     menuToggle.addEventListener('click', function() {
-        nav.classList.toggle('nav-open');
+        nav.classList.toggle('hidden');
     });
 
     // Smooth scroll para enlaces internos
@@ -45,11 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Chat widget toggle
-    const chatToggle = document.querySelector('.chat-toggle');
-    const chatWidget = document.querySelector('.chat-widget');
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatWidget = document.getElementById('chat-widget');
 
     chatToggle.addEventListener('click', function() {
-        chatWidget.classList.toggle('chat-open');
+        // Aquí puedes agregar la lógica para abrir/cerrar el chat
+        console.log('Chat toggled');
     });
 
     // Animación de aparición al hacer scroll
@@ -61,7 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const elemBottom = elem.getBoundingClientRect().bottom;
             
             if (elemTop < window.innerHeight && elemBottom > 0) {
-                elem.classList.add('visible');
+                elem.classList.add('opacity-100');
+                elem.classList.remove('opacity-0');
             }
         });
     }
