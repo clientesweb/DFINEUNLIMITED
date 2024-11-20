@@ -1,164 +1,169 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFINE JEWELS - Joyería de Lujo</title>
+    <title>DFine Lifestyle - Luxury Jewelry</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'dfine-gold': '#D4AF37',
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .text-shadow {
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-black text-white">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80">
+<body class="bg-gray-100">
+    <!-- Top Banner -->
+    <div id="top-banner" class="bg-black text-white py-2 px-4 text-center">
+        <p id="banner-text" class="text-sm"></p>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex-1">
-                <button id="menu-toggle" class="text-white focus:outline-none" aria-label="Menú">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <a href="/" class="text-2xl font-bold">
+                <img src="logo.png" alt="DFine Lifestyle" class="h-10">
+            </a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#" class="text-gray-600 hover:text-black">Home</a>
+                <a href="#products" class="text-gray-600 hover:text-black">Products</a>
+                <a href="#about" class="text-gray-600 hover:text-black">About</a>
+                <a href="#contact" class="text-gray-600 hover:text-black">Contact</a>
+            </div>
+            <div class="flex items-center">
+                <button id="cart-button" class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
                 </button>
-            </div>
-            <div class="flex-1 text-center">
-                <a href="/" class="text-2xl font-bold text-dfine-gold">DFINE JEWELS</a>
-            </div>
-            <div class="flex-1 flex justify-end">
-                <a href="/search" class="text-white mr-4" aria-label="Buscar">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </a>
-                <a href="/cart" class="text-white" aria-label="Carrito">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                    </svg>
-                </a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="relative h-screen">
-            <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline poster="poster.jpg">
-                <source src="background-video.mp4" type="video/mp4">
-            </video>
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <h1 class="text-5xl md:text-7xl font-bold mb-8 text-shadow">DFINE JEWELS</h1>
-                <a href="#shop-now" class="bg-white text-black px-8 py-3 text-lg font-semibold hover:bg-opacity-90 transition duration-300">COMPRAR AHORA</a>
+    <!-- Hero Section with Video -->
+    <section class="relative h-screen">
+        <video autoplay loop muted class="absolute z-0 w-full h-full object-cover">
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="absolute z-10 inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">DFine Lifestyle</h1>
+                <p class="text-xl mb-8">Luxury Jewelry for Every Occasion</p>
+                <a href="#products" class="bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">Shop Now</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="featured-products" class="py-16 bg-gray-900">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Productos Destacados</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-black p-6 rounded-lg shadow-lg">
-                        <img src="product1.jpg" alt="Cadena Cubana" class="w-full h-64 object-cover mb-4 rounded">
-                        <h3 class="text-xl font-semibold mb-2">Cadena Cubana</h3>
-                        <p class="text-gray-400 mb-4">Desde $999</p>
-                        <a href="/product/cadena-cubana" class="inline-block bg-dfine-gold text-black px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Ver Detalles</a>
-                    </div>
-                    <div class="bg-black p-6 rounded-lg shadow-lg">
-                        <img src="product2.jpg" alt="Colgante Personalizado" class="w-full h-64 object-cover mb-4 rounded">
-                        <h3 class="text-xl font-semibold mb-2">Colgante Personalizado</h3>
-                        <p class="text-gray-400 mb-4">Desde $599</p>
-                        <a href="/product/colgante-personalizado" class="inline-block bg-dfine-gold text-black px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Ver Detalles</a>
-                    </div>
-                    <div class="bg-black p-6 rounded-lg shadow-lg">
-                        <img src="product3.jpg" alt="Set de Diamantes" class="w-full h-64 object-cover mb-4 rounded">
-                        <h3 class="text-xl font-semibold mb-2">Set de Diamantes</h3>
-                        <p class="text-gray-400 mb-4">Desde $1,999</p>
-                        <a href="/product/set-diamantes" class="inline-block bg-dfine-gold text-black px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about-us" class="py-16 bg-gray-800">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-6">Sobre Nosotros</h2>
-                <p class="max-w-2xl mx-auto text-lg">DFINE JEWELS es una marca de joyería de lujo que ofrece piezas únicas y personalizadas. Nuestro compromiso es proporcionar la más alta calidad en cada detalle, creando joyas que reflejen la individualidad y el estilo de nuestros clientes.</p>
-            </div>
-        </section>
-
-        <section id="instagram-feed" class="py-16 bg-black">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Síguenos en Instagram</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <img src="insta1.jpg" alt="Instagram 1" class="w-full h-40 object-cover rounded">
-                    <img src="insta2.jpg" alt="Instagram 2" class="w-full h-40 object-cover rounded">
-                    <img src="insta3.jpg" alt="Instagram 3" class="w-full h-40 object-cover rounded">
-                    <img src="insta4.jpg" alt="Instagram 4" class="w-full h-40 object-cover rounded">
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-900 text-white py-12">
+    <!-- Products Section -->
+    <section id="products" class="py-16">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/about" class="hover:text-dfine-gold transition duration-300">Sobre Nosotros</a></li>
-                        <li><a href="/contact" class="hover:text-dfine-gold transition duration-300">Contacto</a></li>
-                        <li><a href="/faq" class="hover:text-dfine-gold transition duration-300">Preguntas Frecuentes</a></li>
-                        <li><a href="/shipping" class="hover:text-dfine-gold transition duration-300">Envíos</a></li>
+            <h2 class="text-3xl font-bold text-center mb-8">Our Collections</h2>
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Reels Section -->
+    <section class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Follow Us on Instagram</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Instagram Reels will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">About DFine Lifestyle</h2>
+            <p class="text-center max-w-2xl mx-auto">DFine Lifestyle is your premier destination for luxury jewelry. We offer a curated selection of high-quality pieces that are perfect for any occasion. Our commitment to excellence ensures that each item meets the highest standards of craftsmanship and design.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+            <form id="contact-form" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <img src="logo-white.png" alt="DFine Lifestyle" class="h-10 mb-4">
+                    <p>Luxury jewelry for every occasion.</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                        <li><a href="#products" class="hover:text-gray-300">Products</a></li>
+                        <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                        <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Síguenos</h3>
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold mb-2">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="#" aria-label="Facebook" class="text-2xl hover:text-dfine-gold transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="text-2xl hover:text-dfine-gold transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" aria-label="Twitter" class="text-2xl hover:text-dfine-gold transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Boletín</h3>
-                    <form class="flex">
-                        <input type="email" placeholder="Tu correo electrónico" class="flex-grow px-4 py-2 bg-gray-800 text-white rounded-l focus:outline-none" required>
-                        <button type="submit" class="bg-dfine-gold text-black px-4 py-2 rounded-r hover:bg-opacity-80 transition duration-300">Suscribirse</button>
+                <div class="w-full md:w-1/4">
+                    <h3 class="text-lg font-bold mb-2">Newsletter</h3>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email" class="w-full px-3 py-2 mb-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Subscribe</button>
                     </form>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
-                <p>&copy; 2024 DFINE JEWELS. Todos los derechos reservados.</p>
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 DFine Lifestyle. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <div id="chat-widget" class="fixed bottom-4 right-4 z-50">
-        <button id="chat-toggle" class="bg-dfine-gold text-black w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-opacity-80 transition duration-300" aria-label="Abrir chat">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-            </svg>
-        </button>
+    <!-- Product Modal -->
+    <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg max-w-2xl w-full">
+            <div id="modal-content">
+                <!-- Modal content will be dynamically loaded here -->
+            </div>
+            <button id="close-modal" class="mt-4 bg-gray-300 text-black px-4 py-2 rounded-lg hover:bg-gray-400 transition duration-300">Close</button>
+        </div>
     </div>
 
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <!-- Shopping Cart -->
+    <div id="shopping-cart" class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="p-4">
+            <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically loaded here -->
+            </div>
+            <div class="mt-4">
+                <p class="text-xl font-bold">Total: $<span id="cart-total">0.00</span></p>
+                <button id="checkout-button" class="mt-4 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID"></script>
     <script src="script.js"></script>
 </body>
 </html>
