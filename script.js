@@ -1,11 +1,15 @@
 // Sample product data
 const products = [
-    { id: 1, name: "Diamond Ring", price: 1999.99, images: ["https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Rings", description: "Elegant diamond ring with 18k gold band." },
-    { id: 2, name: "Gold Necklace", price: 799.99, images: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Chains and Pendants", description: "24k gold necklace with intricate design." },
-    { id: 3, name: "Silver Bracelet", price: 299.99, images: ["https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Bracelets", description: "Sterling silver bracelet with charms." },
-    { id: 4, name: "Sapphire Earrings", price: 599.99, images: ["https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Earrings", description: "Blue sapphire earrings with diamond accents." },
-    { id: 5, name: "Luxury Watch", price: 2499.99, images: ["https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Watches", description: "Luxury watch with automatic movement and gold case." },
-    { id: 6, name: "Custom Pendant", price: 399.99, images: ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Custom Work", description: "Custom pendant with laser engraving." },
+    { id: 1, name: "Diamond Ring", price: 1999.99, images: ["https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Rings", description: "Elegant diamond ring with 18k gold band." },
+    { id: 2, name: "Gold Necklace", price: 799.99, images: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Chains and Pendants", description: "24k gold necklace with intricate design." },
+    { id: 3, name: "Silver Bracelet", price: 299.99, images: ["https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Bracelets", description: "Sterling silver bracelet with charms." },
+    { id: 4, name: "Sapphire Earrings", price: 599.99, images: ["https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Earrings", description: "Blue sapphire earrings with diamond accents." },
+    { id: 5, name: "Luxury Watch", price: 2499.99, images: ["https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Watches", description: "Luxury watch with automatic movement and gold case." },
+    { id: 6, name: "Custom Pendant", price: 399.99, images: ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Custom Work", description: "Custom pendant with laser engraving." },
+    { id: 7, name: "Pearl Necklace", price: 599.99, images: ["https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Chains and Pendants", description: "Elegant pearl necklace with 18k gold clasp." },
+    { id: 8, name: "Diamond Tennis Bracelet", price: 1799.99, images: ["https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Bracelets", description: "Stunning diamond tennis bracelet with 14k white gold." },
+    { id: 9, name: "Emerald Ring", price: 1299.99, images: ["https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Rings", description: "Exquisite emerald ring with diamond accents." },
+    { id: 10, name: "Rose Gold Bangle", price: 449.99, images: ["https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Bracelets", description: "Stylish rose gold bangle with intricate design." }
 ];
 
 // Sample Instagram Reels data
@@ -83,15 +87,15 @@ function loadProducts() {
         const categoryElement = document.createElement('div');
         categoryElement.className = 'mb-12';
         categoryElement.innerHTML = `
-            <h3 class="text-2xl font-bold mb-6 text-[#D4AF37]">${category}</h3>
+            <h3 class="text-2xl font-bold mb-6">${category}</h3>
             <div class="product-slider flex space-x-4 overflow-x-auto pb-4">
                 ${categoryProducts.map(product => `
-                    <div class="product-card flex-shrink-0 w-64 bg-black rounded-lg shadow-lg overflow-hidden border border-[#D4AF37]">
+                    <div class="product-card flex-shrink-0 w-64 bg-white rounded-lg shadow-lg overflow-hidden">
                         <img src="${product.images[0]}" alt="${product.name}" class="w-full h-64 object-cover">
                         <div class="p-4">
-                            <h4 class="text-xl font-bold mb-2 text-white">${product.name}</h4>
-                            <p class="text-[#D4AF37] mb-4">$${product.price.toFixed(2)}</p>
-                            <button onclick="openProductModal(${product.id})" class="bg-[#D4AF37] text-black px-4 py-2 rounded-full hover:bg-opacity-80 transition duration-300">View Details</button>
+                            <h4 class="text-xl font-bold mb-2 text-black">${product.name}</h4>
+                            <p class="text-gray-600 mb-4">$${product.price.toFixed(2)}</p>
+                            <button onclick="openProductModal(${product.id})" class="bg-[#D4AF37] text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition duration-300">View Details</button>
                         </div>
                     </div>
                 `).join('')}
@@ -137,10 +141,10 @@ function openProductModal(productId) {
                 <div class="swiper-button-prev"></div>
             </div>
             <div>
-                <h3 class="text-2xl font-bold mb-2 text-[#D4AF37]">${product.name}</h3>
-                <p class="text-xl mb-4 text-white">$${product.price.toFixed(2)}</p>
-                <p class="mb-4 text-white">${product.description}</p>
-                <button onclick="addToCart(${product.id})" class="bg-[#D4AF37] text-black px-4 py-2 rounded-full hover:bg-opacity-80 transition duration-300">Add to Cart</button>
+                <h3 class="text-2xl font-bold mb-2">${product.name}</h3>
+                <p class="text-xl mb-4">$${product.price.toFixed(2)}</p>
+                <p class="mb-4">${product.description}</p>
+                <button onclick="addToCart(${product.id})" class="bg-[#D4AF37] text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition duration-300">Add to Cart</button>
             </div>
         `;
         document.getElementById('product-modal').classList.remove('hidden');
@@ -164,22 +168,19 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProducts();
     loadInstagramReels();
 
-    // Preloader with opening curtain effect
+    // Preloader
     const preloader = document.getElementById('preloader');
     const curtainLeft = document.querySelector('.curtain-left');
     const curtainRight = document.querySelector('.curtain-right');
 
     window.addEventListener('load', () => {
         setTimeout(() => {
-            curtainLeft.style.transform = 'translateX(-100%)';
-            curtainRight.style.transform = 'translateX(100%)';
+            preloader.style.display = 'none';
+            curtainLeft.classList.add('open');
+            curtainRight.classList.add('open');
             setTimeout(() => {
-                preloader.style.opacity = '0';
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                    curtainLeft.style.display = 'none';
-                    curtainRight.style.display = 'none';
-                }, 500);
+                curtainLeft.style.display = 'none';
+                curtainRight.style.display = 'none';
             }, 1000);
         }, 2000);
     });
@@ -290,5 +291,3 @@ paypal.Buttons({
         });
     }
 }).render('#paypal-button-container');
-
-console.log("Script loaded successfully!");
