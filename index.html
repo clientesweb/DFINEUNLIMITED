@@ -45,19 +45,63 @@
         }
         
         .category-item {
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
         
         .category-item:hover {
-            background-color: #D4AF37;
-            color: #000000;
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .product-slider {
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .product-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body class="bg-black text-white">
     <!-- Top Banner -->
     <div id="top-banner" class="bg-gradient text-white py-2 px-4 text-center font-bold">
-        <p id="banner-text" class="text-sm md:text-base"></p>
+        <p id="banner-text" class="text-sm md:text-base inline-block mr-4"></p>
+        <div class="inline-block">
+            <a href="#" class="text-white hover:text-[#D4AF37] mx-1"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white hover:text-[#D4AF37] mx-1"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white hover:text-[#D4AF37] mx-1"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-[#D4AF37] mx-1"><i class="fab fa-pinterest-p"></i></a>
+        </div>
     </div>
 
     <!-- Header -->
@@ -86,17 +130,17 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-black transform translate-x-full transition-transform duration-300 ease-in-out z-50">
-        <div class="p-4">
-            <button id="close-mobile-menu" class="text-white hover:text-[#D4AF37] transition duration-300 mb-4">
-                <i class="fas fa-times"></i>
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="h-full flex flex-col justify-center items-center">
+            <button id="close-mobile-menu" class="absolute top-4 right-4 text-white hover:text-[#D4AF37] transition duration-300">
+                <i class="fas fa-times text-2xl"></i>
             </button>
-            <div class="flex flex-col space-y-4">
-                <a href="#" class="text-white hover:text-[#D4AF37] transition duration-300">Inicio</a>
-                <a href="#categories" class="text-white hover:text-[#D4AF37] transition duration-300">Categorías</a>
-                <a href="#products" class="text-white hover:text-[#D4AF37] transition duration-300">Productos</a>
-                <a href="#about" class="text-white hover:text-[#D4AF37] transition duration-300">Nosotros</a>
-                <a href="#contact" class="text-white hover:text-[#D4AF37] transition duration-300">Contacto</a>
+            <div class="flex flex-col space-y-8 text-center">
+                <a href="#" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Inicio</a>
+                <a href="#categories" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Categorías</a>
+                <a href="#products" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Productos</a>
+                <a href="#about" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Nosotros</a>
+                <a href="#contact" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Contacto</a>
             </div>
         </div>
     </div>
@@ -119,30 +163,60 @@
     <section id="categories" class="py-16 bg-gradient">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Nuestras Categorías</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <div class="category-item bg-black p-4 rounded-lg text-center cursor-pointer">
-                    <i class="fas fa-ring text-4xl mb-2 text-[#D4AF37]"></i>
-                    <h3 class="text-lg font-semibold">Anillos</h3>
-                </div>
-                <div class="category-item bg-black p-4 rounded-lg text-center cursor-pointer">
-                    <i class="fas fa-gem text-4xl mb-2 text-[#D4AF37]"></i>
-                    <h3 class="text-lg font-semibold">Collares</h3>
-                </div>
-                <div class="category-item bg-black p-4 rounded-lg text-center cursor-pointer">
-                    <i class="fas fa-hand-sparkles text-4xl mb-2 text-[#D4AF37]"></i>
-                    <h3 class="text-lg font-semibold">Pulseras</h3>
-                </div>
-                <div class="category-item bg-black p-4 rounded-lg text-center cursor-pointer">
-                    <i class="fas fa-star text-4xl mb-2 text-[#D4AF37]"></i>
-                    <h3 class="text-lg font-semibold">Pendientes</h3>
-                </div>
-                <div class="category-item bg-black p-4 rounded-lg text-center cursor-pointer">
-                    <i class="fas fa-crown text-4xl mb-2 text-[#D4AF37]"></i>
-                    <h3 class="text-lg font-semibold">Relojes</h3>
-                </div>
-                <div class="category-item bg-black p-4 rounded-lg text-center cursor-pointer">
-                    <i class="fas fa-magic text-4xl mb-2 text-[#D4AF37]"></i>
-                    <h3 class="text-lg font-semibold">Personalizados</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="#bracelets" class="category-item relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="bracelets-bg.jpg" alt="Bracelets" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h3 class="text-2xl font-bold text-white">Bracelets</h3>
+                    </div>
+                </a>
+                <a href="#earrings" class="category-item relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="earrings-bg.jpg" alt="Earrings" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h3 class="text-2xl font-bold text-white">Earrings</h3>
+                    </div>
+                </a>
+                <a href="#rings" class="category-item relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="rings-bg.jpg" alt="Rings" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h3 class="text-2xl font-bold text-white">Rings</h3>
+                    </div>
+                </a>
+                <a href="#custom-work" class="category-item relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="custom-work-bg.jpg" alt="Custom Work" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h3 class="text-2xl font-bold text-white">Custom Work</h3>
+                    </div>
+                </a>
+                <a href="#chains-and-pendants" class="category-item relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="chains-pendants-bg.jpg" alt="Chains and Pendants" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h3 class="text-2xl font-bold text-white">Chains and Pendants</h3>
+                    </div>
+                </a>
+                <a href="#personalizado" class="category-item relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="personalizado-bg.jpg" alt="Personalizado" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h3 class="text-2xl font-bold text-white">Personalizado</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 p-8">
+                        <h2 class="text-3xl font-bold mb-4">Oferta Especial</h2>
+                        <p class="text-lg mb-6">Obtén un 20% de descuento en nuestra nueva colección de verano. ¡Tiempo limitado!</p>
+                        <a href="#" class="bg-black text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-opacity-80 transition duration-300">Ver Oferta</a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="promo-banner-mockup.jpg" alt="Promotional Offer" class="w-full h-auto">
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,7 +226,7 @@
     <section id="products" class="py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Nuestras Colecciones</h2>
-            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="product-slider flex space-x-6 overflow-x-auto pb-6">
                 <!-- Products will be dynamically loaded here -->
             </div>
         </div>
