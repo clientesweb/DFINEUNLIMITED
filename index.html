@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFine Lifestyle - Joyería de Lujo</title>
+    <title>DFINE JEWELS - Luxury Jewelry</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -18,11 +18,11 @@
         }
         
         .bg-gradient {
-            background: linear-gradient(135deg, #000000, #D4AF37, #FFFFFF);
+            background: linear-gradient(135deg, #000000, #D4AF37);
         }
         
         .text-gradient {
-            background: linear-gradient(135deg, #D4AF37, #FFFFFF);
+            background: linear-gradient(135deg, #D4AF37, #000000);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -93,6 +93,19 @@
     </style>
 </head>
 <body class="bg-black text-white">
+    <!-- SVG Background -->
+    <div class="fixed inset-0 z-0 pointer-events-none opacity-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <pattern id="news-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <text x="10" y="50" font-family="Arial" font-size="20" fill="#FFFFFF">VIP</text>
+                    <text x="50" y="80" font-family="Arial" font-size="15" fill="#FFFFFF">DESIGN</text>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#news-pattern)" />
+        </svg>
+    </div>
+
     <!-- Top Banner -->
     <div id="top-banner" class="bg-gradient text-white py-2 px-4 text-center font-bold">
         <p id="banner-text" class="text-sm md:text-base inline-block mr-4"></p>
@@ -100,22 +113,23 @@
             <a href="#" class="text-white hover:text-[#D4AF37] mx-1"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="text-white hover:text-[#D4AF37] mx-1"><i class="fab fa-instagram"></i></a>
             <a href="#" class="text-white hover:text-[#D4AF37] mx-1"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-white hover:text-[#D4AF37] mx-1"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="text-white hover:text-[#D4AF37] mx-1"><i class="fab fa-tiktok"></i></a>
         </div>
     </div>
 
     <!-- Header -->
     <header class="bg-black sticky top-0 z-50 shadow-md">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-gradient">
-                DFine Lifestyle
+            <a href="/" class="text-2xl font-bold text-gradient flex items-center">
+                <img src="dfine-jewels-logo.png" alt="DFINE JEWELS Logo" class="h-10 mr-2">
+                DFINE JEWELS
             </a>
             <div class="hidden md:flex space-x-6">
-                <a href="#" class="text-white hover:text-[#D4AF37] transition duration-300">Inicio</a>
-                <a href="#categories" class="text-white hover:text-[#D4AF37] transition duration-300">Categorías</a>
-                <a href="#products" class="text-white hover:text-[#D4AF37] transition duration-300">Productos</a>
-                <a href="#about" class="text-white hover:text-[#D4AF37] transition duration-300">Nosotros</a>
-                <a href="#contact" class="text-white hover:text-[#D4AF37] transition duration-300">Contacto</a>
+                <a href="#" class="text-white hover:text-[#D4AF37] transition duration-300">Home</a>
+                <a href="#categories" class="text-white hover:text-[#D4AF37] transition duration-300">Categories</a>
+                <a href="#products" class="text-white hover:text-[#D4AF37] transition duration-300">Products</a>
+                <a href="#about" class="text-white hover:text-[#D4AF37] transition duration-300">About</a>
+                <a href="#contact" class="text-white hover:text-[#D4AF37] transition duration-300">Contact</a>
             </div>
             <div class="flex items-center space-x-4">
                 <button id="cart-button" class="text-white hover:text-[#D4AF37] transition duration-300">
@@ -136,11 +150,11 @@
                 <i class="fas fa-times text-2xl"></i>
             </button>
             <div class="flex flex-col space-y-8 text-center">
-                <a href="#" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Inicio</a>
-                <a href="#categories" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Categorías</a>
-                <a href="#products" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Productos</a>
-                <a href="#about" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Nosotros</a>
-                <a href="#contact" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Contacto</a>
+                <a href="#" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Home</a>
+                <a href="#categories" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Categories</a>
+                <a href="#products" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Products</a>
+                <a href="#about" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">About</a>
+                <a href="#contact" class="text-white hover:text-[#D4AF37] transition duration-300 text-2xl">Contact</a>
             </div>
         </div>
     </div>
@@ -152,9 +166,9 @@
         </video>
         <div class="absolute z-10 inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
             <div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gradient">DFine Lifestyle</h1>
-                <p class="text-xl mb-8">Joyería de Lujo para Cada Ocasión</p>
-                <a href="#products" class="bg-[#D4AF37] text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">Comprar Ahora</a>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gradient">DFINE JEWELS</h1>
+                <p class="text-xl mb-8">Luxury Jewelry for Every Occasion</p>
+                <a href="#products" class="bg-[#D4AF37] text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">Shop Now</a>
             </div>
         </div>
     </section>
@@ -162,7 +176,7 @@
     <!-- Categories Section -->
     <section id="categories" class="py-16 bg-gradient">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Nuestras Categorías</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Our Categories</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <a href="#bracelets" class="category-item relative overflow-hidden rounded-lg shadow-lg">
                     <img src="bracelets-bg.jpg" alt="Bracelets" class="w-full h-64 object-cover">
@@ -194,10 +208,10 @@
                         <h3 class="text-2xl font-bold text-white">Chains and Pendants</h3>
                     </div>
                 </a>
-                <a href="#personalizado" class="category-item relative overflow-hidden rounded-lg shadow-lg">
-                    <img src="personalizado-bg.jpg" alt="Personalizado" class="w-full h-64 object-cover">
+                <a href="#watches" class="category-item relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="watches-bg.jpg" alt="Watches" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <h3 class="text-2xl font-bold text-white">Personalizado</h3>
+                        <h3 class="text-2xl font-bold text-white">Watches</h3>
                     </div>
                 </a>
             </div>
@@ -210,9 +224,9 @@
             <div class="bg-gradient rounded-lg shadow-lg overflow-hidden">
                 <div class="md:flex items-center">
                     <div class="md:w-1/2 p-8">
-                        <h2 class="text-3xl font-bold mb-4">Oferta Especial</h2>
-                        <p class="text-lg mb-6">Obtén un 20% de descuento en nuestra nueva colección de verano. ¡Tiempo limitado!</p>
-                        <a href="#" class="bg-black text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-opacity-80 transition duration-300">Ver Oferta</a>
+                        <h2 class="text-3xl font-bold mb-4">Special Offer</h2>
+                        <p class="text-lg mb-6">Get 20% off on our new summer collection. Limited time only!</p>
+                        <a href="#" class="bg-black text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-opacity-80 transition duration-300">View Offer</a>
                     </div>
                     <div class="md:w-1/2">
                         <img src="promo-banner-mockup.jpg" alt="Promotional Offer" class="w-full h-auto">
@@ -225,7 +239,7 @@
     <!-- Products Section -->
     <section id="products" class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Nuestras Colecciones</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Our Collections</h2>
             <div class="product-slider flex space-x-6 overflow-x-auto pb-6">
                 <!-- Products will be dynamically loaded here -->
             </div>
@@ -235,7 +249,7 @@
     <!-- Instagram Reels Section -->
     <section class="bg-gradient py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Síguenos en Instagram</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Follow Us on Instagram</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="instagram-reels">
                 <!-- Instagram Reels will be dynamically loaded here -->
             </div>
@@ -245,15 +259,15 @@
     <!-- About Section -->
     <section id="about" class="py-16 bg-black">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Sobre DFine Lifestyle</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">About DFINE JEWELS</h2>
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="about-image.jpg" alt="DFine Lifestyle" class="rounded-lg shadow-lg">
+                    <img src="about-image.jpg" alt="DFINE JEWELS" class="rounded-lg shadow-lg">
                 </div>
                 <div class="md:w-1/2 md:pl-8">
-                    <p class="text-lg mb-6">DFine Lifestyle es tu destino premium para joyería de lujo. Ofrecemos una selección cuidadosamente curada de piezas de alta calidad que son perfectas para cualquier ocasión. Nuestro compromiso con la excelencia asegura que cada artículo cumpla con los más altos estándares de artesanía y diseño.</p>
-                    <p class="text-lg mb-6">Con años de experiencia en la industria de la joyería fina, nuestro equipo de expertos se dedica a proporcionar no solo productos excepcionales, sino también un servicio al cliente inigualable. Ya sea que estés buscando el anillo de compromiso perfecto, un regalo especial o una pieza única para ti mismo, en DFine Lifestyle encontrarás la joya que refleja tu estilo y personalidad.</p>
-                    <a href="#contact" class="bg-[#D4AF37] text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">Contáctanos</a>
+                    <p class="text-lg mb-6">DFINE JEWELS is your premium destination for luxury jewelry. We offer a carefully curated selection of high-quality pieces that are perfect for any occasion. Our commitment to excellence ensures that each item meets the highest standards of craftsmanship and design.</p>
+                    <p class="text-lg mb-6">With years of experience in the fine jewelry industry, our team of experts is dedicated to providing not only exceptional products but also unparalleled customer service. Whether you're looking for the perfect engagement ring, a special gift, or a unique piece for yourself, at DFINE JEWELS you'll find the jewelry that reflects your style and personality.</p>
+                    <a href="#contact" class="bg-[#D4AF37] text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -262,10 +276,10 @@
     <!-- Contact Form -->
     <section id="contact" class="py-16 bg-gradient">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Contáctanos</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Contact Us</h2>
             <form id="contact-form" class="max-w-lg mx-auto bg-black p-8 rounded-lg shadow-lg">
                 <div class="mb-4">
-                    <label for="name" class="block text-[#D4AF37] font-bold mb-2">Nombre</label>
+                    <label for="name" class="block text-[#D4AF37] font-bold mb-2">Name</label>
                     <input type="text" id="name" name="name" required class="w-full px-3 py-2 bg-gray-800 text-white border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
                 </div>
                 <div class="mb-4">
@@ -273,10 +287,10 @@
                     <input type="email" id="email" name="email" required class="w-full px-3 py-2 bg-gray-800 text-white border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
                 </div>
                 <div class="mb-4">
-                    <label for="message" class="block text-[#D4AF37] font-bold mb-2">Mensaje</label>
+                    <label for="message" class="block text-[#D4AF37] font-bold mb-2">Message</label>
                     <textarea id="message" name="message" required class="w-full px-3 py-2 bg-gray-800 text-white border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" rows="4"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Enviar Mensaje</button>
+                <button type="submit" class="w-full bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Send Message</button>
             </form>
         </div>
     </section>
@@ -286,45 +300,48 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 text-gradient">DFine Lifestyle</h3>
-                    <p class="mb-4">Joyería de lujo para cada ocasión.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-gradient flex items-center">
+                        <img src="dfine-jewels-logo.png" alt="DFINE JEWELS Logo" class="h-8 mr-2">
+                        DFINE JEWELS
+                    </h3>
+                    <p class="mb-4">Luxury jewelry for every occasion.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-[#D4AF37] hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="text-[#D4AF37] hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-[#D4AF37] hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-[#D4AF37] hover:text-white transition duration-300"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="text-[#D4AF37] hover:text-white transition duration-300"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-[#D4AF37] transition duration-300">Inicio</a></li>
-                        <li><a href="#categories" class="hover:text-[#D4AF37] transition duration-300">Categorías</a></li>
-                        <li><a href="#products" class="hover:text-[#D4AF37] transition duration-300">Productos</a></li>
-                        <li><a href="#about" class="hover:text-[#D4AF37] transition duration-300">Nosotros</a></li>
-                        <li><a href="#contact" class="hover:text-[#D4AF37] transition duration-300">Contacto</a></li>
+                        <li><a href="#" class="hover:text-[#D4AF37] transition duration-300">Home</a></li>
+                        <li><a href="#categories" class="hover:text-[#D4AF37] transition duration-300">Categories</a></li>
+                        <li><a href="#products" class="hover:text-[#D4AF37] transition duration-300">Products</a></li>
+                        <li><a href="#about" class="hover:text-[#D4AF37] transition duration-300">About</a></li>
+                        <li><a href="#contact" class="hover:text-[#D4AF37] transition duration-300">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Atención al Cliente</h4>
+                    <h4 class="text-lg font-bold mb-4">Customer Service</h4>
                     <ul class="space-y-2">
                         <li><a href="#" class="hover:text-[#D4AF37] transition duration-300">FAQ</a></li>
-                        <li><a href="#" class="hover:text-[#D4AF37] transition duration-300">Envíos</a></li>
-                        <li><a href="#" class="hover:text-[#D4AF37] transition duration-300">Devoluciones</a></li>
-                        <li><a href="#" class="hover:text-[#D4AF37] transition duration-300">Garantía</a></li>
+                        <li><a href="#" class="hover:text-[#D4AF37] transition duration-300">Shipping</a></li>
+                        <li><a href="#" class="hover:text-[#D4AF37] transition duration-300">Returns</a></li>
+                        <li><a href="#" class="hover:text-[#D4AF37] transition duration-300">Warranty</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold mb-4">Newsletter</h4>
-                    <p class="mb-4">Suscríbete para recibir las últimas novedades y ofertas exclusivas.</p>
-                    <form id="newsletter-form" class="flex">
-                        <input type="email" placeholder="Tu email" class="flex-grow px-3 py-2 bg-gray-800 text-white border border-[#D4AF37] rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
-                        <button type="submit" class="bg-[#D4AF37] text-black px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition duration-300">Suscribir</button>
+                    <p class="mb-4">Subscribe to receive the latest news and exclusive offers.</p>
+                    <form id="newsletter-form" class="flex flex-col">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] mb-2">
+                        <button type="submit" class="bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Subscribe</button>
                     </form>
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-800 text-center">
-                <p>&copy; 2024 DFine Lifestyle. Todos los derechos reservados.</p>
+                <p>&copy; 2024 DFINE JEWELS. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -335,20 +352,20 @@
             <div id="modal-content">
                 <!-- Modal content will be dynamically loaded here -->
             </div>
-            <button id="close-modal" class="mt-4 bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Cerrar</button>
+            <button id="close-modal" class="mt-4 bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Close</button>
         </div>
     </div>
 
     <!-- Shopping Cart -->
     <div id="shopping-cart" class="fixed top-0 right-0 h-full w-80 bg-black border-l border-[#D4AF37] transform translate-x-full transition-transform duration-300 ease-in-out z-50">
         <div class="p-4">
-            <h2 class="text-2xl font-bold mb-4 text-gradient">Tu Carrito</h2>
+            <h2 class="text-2xl font-bold mb-4 text-gradient">Your Cart</h2>
             <div id="cart-items">
                 <!-- Cart items will be dynamically loaded here -->
             </div>
             <div class="mt-4">
                 <p class="text-xl font-bold">Total: $<span id="cart-total">0.00</span></p>
-                <button id="checkout-button" class="mt-4 w-full bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Finalizar Compra</button>
+                <button id="checkout-button" class="mt-4 w-full bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Checkout</button>
             </div>
         </div>
     </div>
@@ -356,10 +373,10 @@
     <!-- Checkout Modal -->
     <div id="checkout-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <div class="bg-black border border-[#D4AF37] p-8 rounded-lg max-w-2xl w-full">
-            <h2 class="text-2xl font-bold mb-4 text-gradient">Finalizar Compra</h2>
+            <h2 class="text-2xl font-bold mb-4 text-gradient">Checkout</h2>
             <form id="checkout-form">
                 <div class="mb-4">
-                    <label for="checkout-name" class="block text-[#D4AF37] font-bold mb-2">Nombre Completo</label>
+                    <label for="checkout-name" class="block text-[#D4AF37] font-bold mb-2">Full Name</label>
                     <input type="text" id="checkout-name" name="checkout-name" required class="w-full px-3 py-2 bg-gray-800 text-white border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
                 </div>
                 <div class="mb-4">
@@ -367,13 +384,13 @@
                     <input type="email" id="checkout-email" name="checkout-email" required class="w-full px-3 py-2 bg-gray-800 text-white border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
                 </div>
                 <div class="mb-4">
-                    <label for="checkout-address" class="block text-[#D4AF37] font-bold mb-2">Dirección de Envío</label>
+                    <label for="checkout-address" class="block text-[#D4AF37] font-bold mb-2">Shipping Address</label>
                     <textarea id="checkout-address" name="checkout-address" required class="w-full px-3 py-2 bg-gray-800 text-white border border-[#D4AF37] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" rows="3"></textarea>
                 </div>
                 <div id="paypal-button-container"></div>
-                <button type="submit" class="mt-4 w-full bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Confirmar Pedido</button>
+                <button type="submit" class="mt-4 w-full bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Confirm Order</button>
             </form>
-            <button id="close-checkout" class="mt-4 w-full bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Cancelar</button>
+            <button id="close-checkout" class="mt-4 w-full bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Cancel</button>
         </div>
     </div>
 
