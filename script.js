@@ -1,11 +1,11 @@
 // Sample product data
 const products = [
-    { id: 1, name: "Anillo de Diamantes", price: 1999.99, images: ["https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Anillos", description: "Elegante anillo de diamantes con banda de oro de 18k." },
-    { id: 2, name: "Collar de Oro", price: 799.99, images: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Cadenas y Colgantes", description: "Collar de oro de 24k con diseño intrincado." },
-    { id: 3, name: "Pulsera de Plata", price: 299.99, images: ["https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Pulseras", description: "Pulsera de plata esterlina con dijes." },
-    { id: 4, name: "Aretes de Zafiro", price: 599.99, images: ["https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Aretes", description: "Aretes de zafiro azul con acentos de diamantes." },
-    { id: 5, name: "Reloj de Lujo", price: 2499.99, images: ["https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Relojes", description: "Reloj de lujo con movimiento automático y caja de oro." },
-    { id: 6, name: "Colgante Personalizado", price: 399.99, images: ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Trabajo Personalizado", description: "Colgante personalizado con grabado láser." }
+    { id: 1, name: "Diamond Ring", price: 1999.99, images: ["https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Rings", description: "Elegant diamond ring with 18k gold band." },
+    { id: 2, name: "Gold Necklace", price: 799.99, images: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Chains and Pendants", description: "24k gold necklace with intricate design." },
+    { id: 3, name: "Silver Bracelet", price: 299.99, images: ["https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Bracelets", description: "Sterling silver bracelet with charms." },
+    { id: 4, name: "Sapphire Earrings", price: 599.99, images: ["https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Earrings", description: "Blue sapphire earrings with diamond accents." },
+    { id: 5, name: "Luxury Watch", price: 2499.99, images: ["https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Watches", description: "Luxury watch with automatic movement and gold case." },
+    { id: 6, name: "Custom Pendant", price: 399.99, images: ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"], category: "Custom Work", description: "Custom pendant with laser engraving." }
 ];
 
 // Sample Instagram Reels data
@@ -58,8 +58,8 @@ function updateCart() {
         itemElement.innerHTML = `
             <div>
                 <h4 class="font-bold">${item.name}</h4>
-                <p>Cantidad: ${item.quantity}</p>
-                <p>Precio: $${(item.price * item.quantity).toFixed(2)}</p>
+                <p>Quantity: ${item.quantity}</p>
+                <p>Price: $${(item.price * item.quantity).toFixed(2)}</p>
             </div>
             <button onclick="removeFromCart(${item.id})" class="text-[#D4AF37] hover:text-white transition duration-300">
                 <i class="fas fa-trash"></i>
@@ -91,7 +91,7 @@ function loadProducts() {
                         <div class="p-4">
                             <h4 class="text-xl font-bold mb-2">${product.name}</h4>
                             <p class="text-gray-600 mb-4">$${product.price.toFixed(2)}</p>
-                            <button onclick="openProductModal(${product.id})" class="bg-[#D4AF37] text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition duration-300">Ver Detalles</button>
+                            <button onclick="openProductModal(${product.id})" class="bg-[#D4AF37] text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition duration-300">View Details</button>
                         </div>
                     </div>
                 `).join('')}
@@ -140,7 +140,7 @@ function openProductModal(productId) {
                 <h3 class="text-2xl font-bold mb-2">${product.name}</h3>
                 <p class="text-xl mb-4">$${product.price.toFixed(2)}</p>
                 <p class="mb-4">${product.description}</p>
-                <button onclick="addToCart(${product.id})" class="bg-[#D4AF37] text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition duration-300">Agregar al Carrito</button>
+                <button onclick="addToCart(${product.id})" class="bg-[#D4AF37] text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition duration-300">Add to Cart</button>
             </div>
         `;
         document.getElementById('product-modal').classList.remove('hidden');
@@ -200,19 +200,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contact-form').addEventListener('submit', (e) => {
         e.preventDefault();
         // Handle contact form submission
-        alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+        alert('Thank you for your message. We will contact you soon.');
     });
 
     document.getElementById('newsletter-form').addEventListener('submit', (e) => {
         e.preventDefault();
         // Handle newsletter form submission
-        alert('Gracias por suscribirte a nuestro boletín.');
+        alert('Thank you for subscribing to our newsletter.');
     });
 
     document.getElementById('checkout-form').addEventListener('submit', (e) => {
         e.preventDefault();
         // Handle checkout form submission
-        alert('Gracias por tu compra. Recibirás un correo electrónico con los detalles de tu pedido.');
+        alert('Thank you for your purchase. You will receive an email with your order details.');
         cart = [];
         updateCart();
         document.getElementById('checkout-modal').classList.add('hidden');
@@ -220,9 +220,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Rotating banner text
     const bannerTexts = [
-        "Envío gratis en pedidos superiores a $500",
-        "Nueva colección de verano disponible",
-        "20% de descuento en todos los anillos"
+        "Free shipping on orders over $500",
+        "New summer collection available",
+        "20% off all rings"
     ];
     let currentBannerIndex = 0;
     const bannerElement = document.getElementById('banner-text');
@@ -253,7 +253,7 @@ paypal.Buttons({
     },
     onApprove: function(data, actions) {
         return actions.order.capture().then(function(details) {
-            alert('Transacción completada por ' + details.payer.name.given_name);
+            alert('Transaction completed by ' + details.payer.name.given_name);
             cart = [];
             updateCart();
             document.getElementById('checkout-modal').classList.add('hidden');
