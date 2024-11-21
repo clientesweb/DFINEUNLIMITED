@@ -90,6 +90,18 @@
                 opacity: 1;
             }
         }
+
+        .floating-logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-logo:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body class="bg-black text-white">
@@ -120,9 +132,8 @@
     <!-- Header -->
     <header class="bg-black sticky top-0 z-50 shadow-md">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-gradient flex items-center">
-                <img src="dfine-jewels-logo.png" alt="DFINE JEWELS Logo" class="h-10 mr-2">
-                DFINE JEWELS
+            <a href="/" class="flex items-center">
+                <img src="https://source.unsplash.com/random/100x100?jewelry-logo" alt="DFINE JEWELS Logo" class="h-10 mr-2">
             </a>
             <div class="hidden md:flex space-x-6">
                 <a href="#" class="text-white hover:text-[#D4AF37] transition duration-300">Home</a>
@@ -162,7 +173,7 @@
     <!-- Hero Section with Video -->
     <section class="relative h-screen">
         <video autoplay loop muted class="absolute z-0 w-full h-full object-cover">
-            <source src="hero-video.mp4" type="video/mp4">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-working-on-a-ring-42668-large.mp4" type="video/mp4">
         </video>
         <div class="absolute z-10 inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
             <div>
@@ -179,37 +190,37 @@
             <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Our Categories</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <a href="#bracelets" class="category-item relative overflow-hidden rounded-lg shadow-lg">
-                    <img src="bracelets-bg.jpg" alt="Bracelets" class="w-full h-64 object-cover">
+                    <img src="https://source.unsplash.com/random/400x300?bracelet" alt="Bracelets" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                         <h3 class="text-2xl font-bold text-white">Bracelets</h3>
                     </div>
                 </a>
                 <a href="#earrings" class="category-item relative overflow-hidden rounded-lg shadow-lg">
-                    <img src="earrings-bg.jpg" alt="Earrings" class="w-full h-64 object-cover">
+                    <img src="https://source.unsplash.com/random/400x300?earrings" alt="Earrings" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                         <h3 class="text-2xl font-bold text-white">Earrings</h3>
                     </div>
                 </a>
                 <a href="#rings" class="category-item relative overflow-hidden rounded-lg shadow-lg">
-                    <img src="rings-bg.jpg" alt="Rings" class="w-full h-64 object-cover">
+                    <img src="https://source.unsplash.com/random/400x300?ring" alt="Rings" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                         <h3 class="text-2xl font-bold text-white">Rings</h3>
                     </div>
                 </a>
                 <a href="#custom-work" class="category-item relative overflow-hidden rounded-lg shadow-lg">
-                    <img src="custom-work-bg.jpg" alt="Custom Work" class="w-full h-64 object-cover">
+                    <img src="https://source.unsplash.com/random/400x300?custom-jewelry" alt="Custom Work" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                         <h3 class="text-2xl font-bold text-white">Custom Work</h3>
                     </div>
                 </a>
                 <a href="#chains-and-pendants" class="category-item relative overflow-hidden rounded-lg shadow-lg">
-                    <img src="chains-pendants-bg.jpg" alt="Chains and Pendants" class="w-full h-64 object-cover">
+                    <img src="https://source.unsplash.com/random/400x300?necklace" alt="Chains and Pendants" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                         <h3 class="text-2xl font-bold text-white">Chains and Pendants</h3>
                     </div>
                 </a>
                 <a href="#watches" class="category-item relative overflow-hidden rounded-lg shadow-lg">
-                    <img src="watches-bg.jpg" alt="Watches" class="w-full h-64 object-cover">
+                    <img src="https://source.unsplash.com/random/400x300?luxury-watch" alt="Watches" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                         <h3 class="text-2xl font-bold text-white">Watches</h3>
                     </div>
@@ -229,7 +240,7 @@
                         <a href="#" class="bg-black text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-opacity-80 transition duration-300">View Offer</a>
                     </div>
                     <div class="md:w-1/2">
-                        <img src="promo-banner-mockup.jpg" alt="Promotional Offer" class="w-full h-auto">
+                        <img src="https://source.unsplash.com/random/800x600?jewelry-collection" alt="Promotional Offer" class="w-full h-auto">
                     </div>
                 </div>
             </div>
@@ -240,8 +251,8 @@
     <section id="products" class="py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Our Collections</h2>
-            <div class="product-slider flex space-x-6 overflow-x-auto pb-6">
-                <!-- Products will be dynamically loaded here -->
+            <div id="product-categories">
+                <!-- Product categories will be dynamically loaded here -->
             </div>
         </div>
     </section>
@@ -262,7 +273,7 @@
             <h2 class="text-3xl font-bold text-center mb-12 text-gradient">About DFINE JEWELS</h2>
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="about-image.jpg" alt="DFINE JEWELS" class="rounded-lg shadow-lg">
+                    <img src="https://source.unsplash.com/random/800x600?jewelry-workshop" alt="DFINE JEWELS" class="rounded-lg shadow-lg">
                 </div>
                 <div class="md:w-1/2 md:pl-8">
                     <p class="text-lg mb-6">DFINE JEWELS is your premium destination for luxury jewelry. We offer a carefully curated selection of high-quality pieces that are perfect for any occasion. Our commitment to excellence ensures that each item meets the highest standards of craftsmanship and design.</p>
@@ -301,7 +312,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-2xl font-bold mb-4 text-gradient flex items-center">
-                        <img src="dfine-jewels-logo.png" alt="DFINE JEWELS Logo" class="h-8 mr-2">
+                        <img src="https://source.unsplash.com/random/100x100?jewelry-logo" alt="DFINE JEWELS Logo" class="h-8 mr-2">
                         DFINE JEWELS
                     </h3>
                     <p class="mb-4">Luxury jewelry for every occasion.</p>
@@ -348,8 +359,8 @@
 
     <!-- Product Modal -->
     <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-        <div class="bg-black border border-[#D4AF37] p-8 rounded-lg max-w-2xl w-full">
-            <div id="modal-content">
+        <div class="bg-black border border-[#D4AF37] p-8 rounded-lg max-w-4xl w-full">
+            <div id="modal-content" class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Modal content will be dynamically loaded here -->
             </div>
             <button id="close-modal" class="mt-4 bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Close</button>
@@ -359,7 +370,10 @@
     <!-- Shopping Cart -->
     <div id="shopping-cart" class="fixed top-0 right-0 h-full w-80 bg-black border-l border-[#D4AF37] transform translate-x-full transition-transform duration-300 ease-in-out z-50">
         <div class="p-4">
-            <h2 class="text-2xl font-bold mb-4 text-gradient">Your Cart</h2>
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-gradient">Your Cart</h2>
+                <img src="https://source.unsplash.com/random/50x50?jewelry-logo" alt="DFINE JEWELS Logo" class="h-8">
+            </div>
             <div id="cart-items">
                 <!-- Cart items will be dynamically loaded here -->
             </div>
@@ -368,6 +382,9 @@
                 <button id="checkout-button" class="mt-4 w-full bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Checkout</button>
             </div>
         </div>
+        <button id="close-cart" class="absolute top-4 right-4 text-white hover:text-[#D4AF37] transition duration-300">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
     </div>
 
     <!-- Checkout Modal -->
@@ -393,6 +410,11 @@
             <button id="close-checkout" class="mt-4 w-full bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Cancel</button>
         </div>
     </div>
+
+    <!-- Floating Logo Button -->
+    <a href="#" class="floating-logo">
+        <img src="https://source.unsplash.com/random/80x80?jewelry-logo" alt="DFINE JEWELS Logo" class="w-16 h-16 rounded-full shadow-lg">
+    </a>
 
     <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID"></script>
     <script src="script.js"></script>
