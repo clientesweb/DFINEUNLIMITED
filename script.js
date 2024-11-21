@@ -1,17 +1,17 @@
 // Sample product data
 const products = [
-    { id: 1, name: "Diamond Ring", price: 1999.99, image: "diamond-ring.jpg", category: "Rings", description: "Elegant diamond ring with 18k gold band." },
-    { id: 2, name: "Gold Necklace", price: 799.99, image: "gold-necklace.jpg", category: "Chains and Pendants", description: "24k gold necklace with intricate design." },
-    { id: 3, name: "Silver Bracelet", price: 299.99, image: "silver-bracelet.jpg", category: "Bracelets", description: "Sterling silver bracelet with charms." },
-    { id: 4, name: "Sapphire Earrings", price: 599.99, image: "sapphire-earrings.jpg", category: "Earrings", description: "Blue sapphire earrings with diamond accents." },
-    { id: 5, name: "Luxury Watch", price: 2499.99, image: "luxury-watch.jpg", category: "Watches", description: "Luxury watch with automatic movement and gold case." },
-    { id: 6, name: "Custom Pendant", price: 399.99, image: "custom-pendant.jpg", category: "Custom Work", description: "Customizable pendant with your choice of gemstone." },
-    { id: 7, name: "Pearl Necklace", price: 899.99, image: "pearl-necklace.jpg", category: "Chains and Pendants", description: "Elegant pearl necklace with 18k gold clasp." },
-    { id: 8, name: "Diamond Tennis Bracelet", price: 3499.99, image: "tennis-bracelet.jpg", category: "Bracelets", description: "Stunning diamond tennis bracelet in white gold." },
-    { id: 9, name: "Emerald Ring", price: 1299.99, image: "emerald-ring.jpg", category: "Rings", description: "Vibrant emerald ring surrounded by diamonds." },
-    { id: 10, name: "Gold Hoop Earrings", price: 349.99, image: "gold-hoops.jpg", category: "Earrings", description: "Classic 14k gold hoop earrings." },
-    { id: 11, name: "Men's Signet Ring", price: 599.99, image: "signet-ring.jpg", category: "Rings", description: "Customizable men's signet ring in yellow gold." },
-    { id: 12, name: "Diamond Pendant", price: 799.99, image: "diamond-pendant.jpg", category: "Chains and Pendants", description: "Solitaire diamond pendant on a delicate gold chain." }
+    { id: 1, name: "Diamond Ring", price: 1999.99, images: ["https://source.unsplash.com/random/800x600?diamond-ring", "https://source.unsplash.com/random/800x600?diamond-ring-2", "https://source.unsplash.com/random/800x600?diamond-ring-3"], category: "Rings", description: "Elegant diamond ring with 18k gold band." },
+    { id: 2, name: "Gold Necklace", price: 799.99, images: ["https://source.unsplash.com/random/800x600?gold-necklace", "https://source.unsplash.com/random/800x600?gold-necklace-2", "https://source.unsplash.com/random/800x600?gold-necklace-3"], category: "Chains and Pendants", description: "24k gold necklace with intricate design." },
+    { id: 3, name: "Silver Bracelet", price: 299.99, images: ["https://source.unsplash.com/random/800x600?silver-bracelet", "https://source.unsplash.com/random/800x600?silver-bracelet-2", "https://source.unsplash.com/random/800x600?silver-bracelet-3"], category: "Bracelets", description: "Sterling silver bracelet with charms." },
+    { id: 4, name: "Sapphire Earrings", price: 599.99, images: ["https://source.unsplash.com/random/800x600?sapphire-earrings", "https://source.unsplash.com/random/800x600?sapphire-earrings-2", "https://source.unsplash.com/random/800x600?sapphire-earrings-3"], category: "Earrings", description: "Blue sapphire earrings with diamond accents." },
+    { id: 5, name: "Luxury Watch", price: 2499.99, images: ["https://source.unsplash.com/random/800x600?luxury-watch", "https://source.unsplash.com/random/800x600?luxury-watch-2", "https://source.unsplash.com/random/800x600?luxury-watch-3"], category: "Watches", description: "Luxury watch with automatic movement and gold case." },
+    { id: 6, name: "Custom Pendant", price: 399.99, images: ["https://source.unsplash.com/random/800x600?custom-pendant", "https://source.unsplash.com/random/800x600?custom-pendant-2", "https://source.unsplash.com/random/800x600?custom-pendant-3"], category: "Custom Work", description: "Customizable pendant with your choice of gemstone." },
+    { id: 7, name: "Pearl Necklace", price: 899.99, images: ["https://source.unsplash.com/random/800x600?pearl-necklace", "https://source.unsplash.com/random/800x600?pearl-necklace-2", "https://source.unsplash.com/random/800x600?pearl-necklace-3"], category: "Chains and Pendants", description: "Elegant pearl necklace with 18k gold clasp." },
+    { id: 8, name: "Diamond Tennis Bracelet", price: 3499.99, images: ["https://source.unsplash.com/random/800x600?tennis-bracelet", "https://source.unsplash.com/random/800x600?tennis-bracelet-2", "https://source.unsplash.com/random/800x600?tennis-bracelet-3"], category: "Bracelets", description: "Stunning diamond tennis bracelet in white gold." },
+    { id: 9, name: "Emerald Ring", price: 1299.99, images: ["https://source.unsplash.com/random/800x600?emerald-ring", "https://source.unsplash.com/random/800x600?emerald-ring-2", "https://source.unsplash.com/random/800x600?emerald-ring-3"], category: "Rings", description: "Vibrant emerald ring surrounded by diamonds." },
+    { id: 10, name: "Gold Hoop Earrings", price: 349.99, images: ["https://source.unsplash.com/random/800x600?gold-hoops", "https://source.unsplash.com/random/800x600?gold-hoops-2", "https://source.unsplash.com/random/800x600?gold-hoops-3"], category: "Earrings", description: "Classic 14k gold hoop earrings." },
+    { id: 11, name: "Men's Signet Ring", price: 599.99, images: ["https://source.unsplash.com/random/800x600?signet-ring", "https://source.unsplash.com/random/800x600?signet-ring-2", "https://source.unsplash.com/random/800x600?signet-ring-3"], category: "Rings", description: "Customizable men's signet ring in yellow gold." },
+    { id: 12, name: "Diamond Pendant", price: 799.99, images: ["https://source.unsplash.com/random/800x600?diamond-pendant", "https://source.unsplash.com/random/800x600?diamond-pendant-2", "https://source.unsplash.com/random/800x600?diamond-pendant-3"], category: "Chains and Pendants", description: "Solitaire diamond pendant on a delicate gold chain." }
 ];
 
 // Sample data for Instagram Reels
@@ -41,9 +41,7 @@ function addToCart(product) {
     if (existingItem) {
         existingItem.quantity++;
     } else {
-        cart.push({ ...product,
-
- quantity: 1 });
+        cart.push({ ...product, quantity: 1 });
     }
     updateCartCount();
     updateCartTotal();
@@ -76,22 +74,33 @@ function renderCart() {
     });
 }
 
-// Render products
+// Render products by category
 function renderProducts() {
-    const productSlider = document.querySelector('.product-slider');
-    products.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.classList.add('product-card', 'bg-black', 'rounded-lg', 'shadow-lg', 'overflow-hidden', 'border', 'border-[#D4AF37]', 'flex-shrink-0', 'w-64', 'transition-transform', 'duration-300', 'hover:scale-105');
-        productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h3 class="font-bold text-xl mb-2 text-[#D4AF37]">${product.name}</h3>
-                <p class="text-white mb-2">$${product.price.toFixed(2)}</p>
-                <button onclick="showProductModal(${product.id})" class="bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300 w-full mb-2">View Details</button>
-                <button onclick="addToCart(${JSON.stringify(product)})" class="bg-black text-[#D4AF37] border border-[#D4AF37] px-4 py-2 rounded-lg hover:bg-[#D4AF37] hover:text-black transition duration-300 w-full">Add to Cart</button>
+    const productCategories = document.getElementById('product-categories');
+    const categories = [...new Set(products.map(product => product.category))];
+    
+    categories.forEach(category => {
+        const categorySection = document.createElement('div');
+        categorySection.classList.add('mb-12');
+        categorySection.innerHTML = `
+            <h3 class="text-2xl font-bold mb-6 text-[#D4AF37]">${category}</h3>
+            <div class="product-slider flex space-x-6 overflow-x-auto pb-6">
+                ${products
+                    .filter(product => product.category === category)
+                    .map(product => `
+                        <div class="product-card bg-black rounded-lg shadow-lg overflow-hidden border border-[#D4AF37] flex-shrink-0 w-64 transition-transform duration-300 hover:scale-105">
+                            <img src="${product.images[0]}" alt="${product.name}" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="font-bold text-xl mb-2 text-[#D4AF37]">${product.name}</h3>
+                                <p class="text-white mb-2">$${product.price.toFixed(2)}</p>
+                                <button onclick="showProductModal(${product.id})" class="bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300 w-full mb-2">View Details</button>
+                                <button onclick="addToCart(${JSON.stringify(product)})" class="bg-black text-[#D4AF37] border border-[#D4AF37] px-4 py-2 rounded-lg hover:bg-[#D4AF37] hover:text-black transition duration-300 w-full">Add to Cart</button>
+                            </div>
+                        </div>
+                    `).join('')}
             </div>
         `;
-        productSlider.appendChild(productCard);
+        productCategories.appendChild(categorySection);
     });
 }
 
@@ -100,11 +109,17 @@ function showProductModal(productId) {
     const product = products.find(p => p.id === productId);
     const modalContent = document.getElementById('modal-content');
     modalContent.innerHTML = `
-        <h2 class="text-2xl font-bold mb-4 text-[#D4AF37]">${product.name}</h2>
-        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover mb-4 rounded-lg">
-        <p class="text-white mb-4">${product.description}</p>
-        <p class="text-xl font-bold mb-4 text-[#D4AF37]">$${product.price.toFixed(2)}</p>
-        <button onclick="addToCart(${JSON.stringify(product)})" class="bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300 w-full">Add to Cart</button>
+        <div class="product-images">
+            ${product.images.map((image, index) => `
+                <img src="${image}" alt="${product.name} - Image ${index + 1}" class="w-full h-64 object-cover mb-4 rounded-lg">
+            `).join('')}
+        </div>
+        <div class="product-details">
+            <h2 class="text-2xl font-bold mb-4 text-[#D4AF37]">${product.name}</h2>
+            <p class="text-white mb-4">${product.description}</p>
+            <p class="text-xl font-bold mb-4 text-[#D4AF37]">$${product.price.toFixed(2)}</p>
+            <button onclick="addToCart(${JSON.stringify(product)})" class="bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300 w-full">Add to Cart</button>
+        </div>
     `;
     document.getElementById('product-modal').classList.remove('hidden');
 }
@@ -128,6 +143,11 @@ function renderInstagramReels() {
 // Toggle shopping cart
 document.getElementById('cart-button').addEventListener('click', () => {
     document.getElementById('shopping-cart').classList.toggle('translate-x-0');
+});
+
+// Close shopping cart
+document.getElementById('close-cart').addEventListener('click', () => {
+    document.getElementById('shopping-cart').classList.remove('translate-x-0');
 });
 
 // Contact form submission
