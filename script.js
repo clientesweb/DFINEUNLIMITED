@@ -93,7 +93,7 @@ function loadProducts() {
                     <div class="product-card flex-shrink-0 w-64 bg-white rounded-lg shadow-lg overflow-hidden">
                         <img src="${product.images[0]}" alt="${product.name}" class="w-full h-64 object-cover">
                         <div class="p-4">
-                            <h4 class="text-xl font-bold mb-2">${product.name}</h4>
+                            <h4 class="text-xl font-bold mb-2 text-black">${product.name}</h4>
                             <p class="text-gray-600 mb-4">$${product.price.toFixed(2)}</p>
                             <button onclick="openProductModal(${product.id})" class="bg-[#D4AF37] text-white px-4 py-2 rounded-full hover:bg-opacity-80 transition duration-300">View Details</button>
                         </div>
@@ -258,6 +258,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setInterval(rotateBannerText, 5000);
+
+    // Smooth scroll for category links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
 
 // PayPal integration
