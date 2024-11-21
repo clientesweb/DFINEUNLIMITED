@@ -70,10 +70,10 @@ function renderCart() {
 
 // Renderizado de productos
 function renderProducts() {
-    const productGrid = document.getElementById('product-grid');
+    const productSlider = document.querySelector('.product-slider');
     products.forEach(product => {
         const productCard = document.createElement('div');
-        productCard.classList.add('product-card', 'bg-black', 'rounded-lg', 'shadow-lg', 'overflow-hidden', 'border', 'border-[#D4AF37]');
+        productCard.classList.add('product-card', 'bg-black', 'rounded-lg', 'shadow-lg', 'overflow-hidden', 'border', 'border-[#D4AF37]', 'flex-shrink-0', 'w-64');
         productCard.innerHTML = `
             <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
             <div class="p-4">
@@ -82,7 +82,7 @@ function renderProducts() {
                 <button onclick="showProductModal(${product.id})" class="bg-[#D4AF37] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Ver Detalles</button>
             </div>
         `;
-        productGrid.appendChild(productCard);
+        productSlider.appendChild(productCard);
     });
 }
 
@@ -147,8 +147,12 @@ let currentBannerIndex = 0;
 
 function rotateBanner() {
     const bannerText = document.getElementById('banner-text');
-    bannerText.textContent = bannerMessages[currentBannerIndex];
-    currentBannerIndex = (currentBannerIndex + 1) % bannerMessages.length;
+    bannerText.classList.remove('fade-in');
+    setTimeout(() => {
+        bannerText.textContent = bannerMessages[currentBannerIndex];
+        bannerText.classList.add('fade-in');
+        currentBannerIndex = (currentBannerIndex + 1) % bannerMessages.length;
+    }, 500);
 }
 
 // Integración de PayPal
@@ -217,3 +221,25 @@ document.addEventListener('DOMContentLoaded', () => {
     rotateBanner(); // Mostrar el banner inicial
     initPayPalButton();
 });
+
+// Efecto de aparición para elementos al hacer scroll
+function handleScrollAnimations() {
+    const elements = document.querySelectorAll('.fade-in-element');
+    elements.forEach(el => {
+        if (isElementInViewport(el)) {
+            el.classList.add('fade-in');
+        }
+    });
+}
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+window.addEventListener('scroll', handleScrollAnimations);
